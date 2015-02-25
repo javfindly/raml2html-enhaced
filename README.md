@@ -1,17 +1,15 @@
 # RAML to HTML
 
-[![NPM version](http://img.shields.io/npm/v/raml2html.svg)](https://www.npmjs.org/package/raml2html)
-[![js-standard-style](https://img.shields.io/badge/code%20style-airbnb-blue.svg?style=flat)](https://github.com/airbnb/javascript)
+[![NPM version](http://img.shields.io/npm/v/raml2html.svg)](https://www.npmjs.org/package/raml2html-enhaced)
 
 A simple RAML to HTML documentation generator, written for Node.js.
-Check [raml2md](https://github.com/kevinrenskers/raml2md) for a RAML to Markdown generator.
+Forked from [raml2html](https://github.com/kevinrenskers/raml2html) to include security information
 
 
 ## Install
 ```
-npm i -g raml2html
+npm i -g raml2html-enhaced
 ```
-
 
 ## Usage
 
@@ -64,7 +62,6 @@ You can use the [latest raml2html directly from Gulp](https://gist.github.com/ik
  
 ### Grunt
 There's a third party Grunt plugin at https://www.npmjs.org/package/grunt-raml2html.
-
 
 ## Example output
 ![Example output](https://raw.github.com/kevinrenskers/raml2html/master/examples/example.png)
