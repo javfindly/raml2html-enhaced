@@ -93,7 +93,18 @@
                                                 {{/each}}
                                             </ul>
                                         {{/if}}
-
+                                        
+                                        {{#if securedBy}}</h2>
+                                            {{#ifIn securedBy @root.securitySchemes}}
+                                            <h3>Security Headers</h3>
+                                            <ul>
+                                                {{#each describedBy.headers}}
+                                                    {{> item}}
+                                                {{/each}}
+                                            </ul>
+                                            {{/ifIn}}
+                                        {{/if}}
+                                        
                                         {{#if queryParameters}}
                                             <h3>Query Parameters</h3>
                                             <ul>
@@ -133,35 +144,16 @@
                                 {{#if responses}}
                                     <div class="tab-pane{{#missingRequestCheckHelper}} active{{/missingRequestCheckHelper}}" id="{{../../uniqueId}}_{{method}}_response">
                                         {{#each responses}}
-                                            <h2>HTTP status code <a href="http://httpstatus.es/{{@key}}" target="_blank">{{@key}}</a></h2>
-                                            {{md this.description}}
-
-                                            {{#if this.headers}}
-                                                <h3>Headers</h3>
-                                                <ul>
-                                                    {{#each this.headers}}
-                                                        {{> item}}
-                                                    {{/each}}
-                                                </ul>
-                                            {{/if}}
-
-                                            {{#if this.body}}
-                                                <h3>Body</h3>
-                                                {{#each this.body}}
-                                                    <p><strong>Type: {{@key}}</strong></p>
-
-                                                    {{#if this.schema}}
-                                                        <p><strong>Schema</strong>:</p>
-                                                        <pre><code>{{this.schema}}</code></pre>
-                                                    {{/if}}
-
-                                                    {{#if this.example}}
-                                                        <p><strong>Example</strong>:</p>
-                                                        <pre><code>{{this.example}}</code></pre>
-                                                    {{/if}}
-                                                {{/each}}
-                                            {{/if}}
+{{> response}}
                                         {{/each}}
+                                        {{#if ../securedBy}}
+                                            <h2>Security Responses</h2>
+                                            {{#ifIn ../securedBy @root.securitySchemes}}
+                                                {{#each describedBy.responses}}
+{{> response}}
+                                                {{/each}}
+                                            {{/ifIn}}
+                                        {{/if}}
                                     </div>
                                 {{/if}}
                             </div>

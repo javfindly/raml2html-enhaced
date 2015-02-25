@@ -1,0 +1,178 @@
+<!DOCTYPE HTML><html><head><title>Batch Processor API documentation</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="generator" content="https://github.com/kevinrenskers/raml2html 1.4.0"><link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"><link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css"><script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script><script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script><script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {
+            $('.page-header pre code, .top-resource-description pre code').each(function(i, block) {
+                hljs.highlightBlock(block);
+            });
+
+            $('[data-toggle]').click(function() {
+                var selector = $(this).data('target') + ' pre code';
+                $(selector).each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
+            });
+        });
+    </script><style>
+        .hljs {
+            background: transparent;
+        }
+        .parent {
+            color: #999;
+        }
+        .list-group-item > .badge {
+            float: none;
+            margin-right: 6px;
+        }
+        .panel-title > .methods {
+            float: right;
+        }
+        .badge {
+            border-radius: 0;
+            text-transform: uppercase;
+            width: 70px;
+            font-weight: normal;
+            color: #f3f3f6;
+            line-height: normal;
+        }
+        .badge_get {
+            background-color: #63a8e2;
+        }
+        .badge_post {
+            background-color: #6cbd7d;
+        }
+        .badge_put {
+            background-color: #22bac4;
+        }
+        .badge_delete {
+            background-color: #d26460;
+        }
+        .list-group, .panel-group {
+            margin-bottom: 0;
+        }
+        .panel-group .panel+.panel-white {
+            margin-top: 0;
+        }
+        .panel-group .panel-white {
+            border-bottom: 1px solid #F5F5F5;
+            border-radius: 0;
+        }
+        .panel-white:last-child {
+            border-bottom-color: white;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+        .panel-white .panel-heading {
+            background: white;
+        }
+        .tab-pane ul {
+            padding-left: 2em;
+        }
+        .tab-pane h2 {
+            font-size: 1.2em;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #ddd;
+        }
+        .tab-pane h3 {
+            font-size: 1.1em;
+        }
+        .tab-content {
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+        #sidebar {
+            margin-top: 30px;
+        }
+        .top-resource-description {
+            border-bottom: 1px solid #ddd;
+            background: #fcfcfc;
+            padding: 15px 15px 0 15px;
+            margin: -15px -15px 10px -15px;
+        }
+        .resource-description {
+            border-bottom: 1px solid #fcfcfc;
+            background: #fcfcfc;
+            padding: 15px 15px 0 15px;
+            margin: -15px -15px 10px -15px;
+        }
+        .resource-description p:last-child {
+            margin: 0;
+        }
+        .list-group .badge {
+            float: left;
+        }
+        .method_description {
+            margin-left: 85px;
+        }
+        .method_description p:last-child {
+            margin: 0;
+        }
+        .list-group-item {
+            cursor: pointer;
+        }
+        .list-group-item:hover {
+            background-color: #f5f5f5;
+        }
+    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>Batch Processor API documentation</h1><p></p><div class="panel panel-default"><div class="panel-heading"><h4>Security Scheme: <strong>basic</strong></h4></div><div class="panel-body"><h5>Type: <strong>Basic Authentication</strong></h5><h5>Supports Basic Authentication (RFC2617) for authenticating all API requests</h5></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="_batch" class="panel-title">Individual Batch job details</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel__batch__batchId_"><span class="parent">/batch</span>/{batchId}</a> <span class="methods"><a href="#" data-toggle="modal" data-target="#_batch__batchId__get"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span></a></span></h4></div><div id="panel__batch__batchId_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div data-toggle="modal" data-target="#_batch__batchId__get" class="list-group-item"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span><div class="method_description"><p>Returns all the information for the specified batch id</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="_batch__batchId__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span> <span class="parent">/batch</span>/{batchId}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Returns all the information for the specified batch id</p></div><div class="alert alert-warning"><span class="glyphicon glyphicon-lock" title="Authentication required"></span> Secured by basic</div><ul class="nav nav-tabs"><li class="active"><a href="#_batch__batchId__get_request" data-toggle="tab">Request</a></li><li><a href="#_batch__batchId__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_batch__batchId__get_request"><h3>URI Parameters</h3><ul><li><strong>batchId</strong>: <em>required (string)</em></li></ul><h3>Security Headers</h3><ul><li><strong>Authorization</strong>: <em>(string)</em><p>Used to send a username and password encoded token</p><p><strong>Example</strong>:</p><pre>Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</pre></li></ul></div><div class="tab-pane" id="_batch__batchId__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+      "id": "42",
+      "status": "COMPLETE",
+      "createTime": "2015-02-16T13:23:00Z",
+      "updateTime": "2014-05-23T10:36:14Z",
+      "endTime": "2014-05-23T10:36:14Z",
+      "successCount": 10,
+      "errorCount": 1,
+      "totalCount": 11,
+      "categoryCounts": {
+        "created": 3,
+        "updated": 4,
+        "deleted": 3
+      }
+    }
+    </code></pre><h2>Security Responses</h2><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Bad or expired token.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Unauthorized request.</p></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel__batch__batchId__items"><span class="parent">/batch/{batchId}</span>/items</a> <span class="methods"><a href="#" data-toggle="modal" data-target="#_batch__batchId__items_get"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span></a></span></h4></div><div id="panel__batch__batchId__items" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div data-toggle="modal" data-target="#_batch__batchId__items_get" class="list-group-item"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span><div class="method_description"><p>Get a list of batch items.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="_batch__batchId__items_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span> <span class="parent">/batch/{batchId}</span>/items</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get a list of batch items.</p></div><div class="alert alert-warning"><span class="glyphicon glyphicon-lock" title="Authentication required"></span> Secured by basic</div><ul class="nav nav-tabs"><li class="active"><a href="#_batch__batchId__items_get_request" data-toggle="tab">Request</a></li><li><a href="#_batch__batchId__items_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_batch__batchId__items_get_request"><h3>URI Parameters</h3><ul><li><strong>batchId</strong>: <em>required (string)</em></li></ul><h3>Security Headers</h3><ul><li><strong>Authorization</strong>: <em>(string)</em><p>Used to send a username and password encoded token</p><p><strong>Example</strong>:</p><pre>Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>size</strong>: <em>(number)</em><p>The total number of pages to return</p></li><li><strong>page</strong>: <em>(number)</em><p>The offset of pages to return</p></li><li><strong>status</strong>: <em>(one of SUCCESS,ERROR)</em><p>Filter items by status.</p></li></ul></div><div class="tab-pane" id="_batch__batchId__items_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+          "page": 1,
+          "size": 20,
+          "total": 2,
+          "data": [
+            {
+              "batchId": "134",
+              "itemNumber": 1,
+              "status": "SUCCESS",
+              "createTime": "2014-05-23T10:35:00Z",
+              "updateTime": "2014-05-23T10:36:14Z",
+              "category": "new-profile",
+              "message": null
+            },
+            {
+              "batchId": "134",
+              "itemNumber": 2,
+              "status": "ERROR",
+              "createTime": "2014-05-23T10:35:00Z",
+              "updateTime": "2014-05-23T10:36:14Z",
+              "category": null,
+              "message": "Missing required email address"
+            }
+          ]
+        }
+        </code></pre><h2>Security Responses</h2><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Bad or expired token.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Unauthorized request.</p></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel__batch__batchId__errorfile"><span class="parent">/batch/{batchId}</span>/errorfile</a> <span class="methods"><a href="#" data-toggle="modal" data-target="#_batch__batchId__errorfile_get"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span></a></span></h4></div><div id="panel__batch__batchId__errorfile" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div data-toggle="modal" data-target="#_batch__batchId__errorfile_get" class="list-group-item"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span><div class="method_description"><p>Get a list of batch items errors ziped.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="_batch__batchId__errorfile_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span> <span class="parent">/batch/{batchId}</span>/errorfile</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get a list of batch items errors ziped.</p></div><div class="alert alert-warning"><span class="glyphicon glyphicon-lock" title="Authentication required"></span> Secured by basic</div><ul class="nav nav-tabs"><li class="active"><a href="#_batch__batchId__errorfile_get_request" data-toggle="tab">Request</a></li><li><a href="#_batch__batchId__errorfile_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_batch__batchId__errorfile_get_request"><h3>URI Parameters</h3><ul><li><strong>batchId</strong>: <em>required (string)</em></li></ul><h3>Security Headers</h3><ul><li><strong>Authorization</strong>: <em>(string)</em><p>Used to send a username and password encoded token</p><p><strong>Example</strong>:</p><pre>Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</pre></li></ul></div><div class="tab-pane" id="_batch__batchId__errorfile_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/zip</strong></p><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>BatchId not found</p><h2>HTTP status code <a href="http://httpstatus.es/409" target="_blank">409</a></h2><p>Processing for this BatchId is not yet completed</p><h2>Security Responses</h2><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Bad or expired token.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Unauthorized request.</p></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="_batches" class="panel-title">Batch job collection details</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel__batches_"><span class="parent">/batches</span>/</a> <span class="methods"><a href="#" data-toggle="modal" data-target="#_batches__get"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span></a></span></h4></div><div id="panel__batches_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div data-toggle="modal" data-target="#_batches__get" class="list-group-item"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span><div class="method_description"><p>Get a list of batches.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="_batches__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span> <span class="parent">/batches</span>/</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get a list of batches.</p></div><div class="alert alert-warning"><span class="glyphicon glyphicon-lock" title="Authentication required"></span> Secured by basic</div><ul class="nav nav-tabs"><li class="active"><a href="#_batches__get_request" data-toggle="tab">Request</a></li><li><a href="#_batches__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_batches__get_request"><h3>Security Headers</h3><ul><li><strong>Authorization</strong>: <em>(string)</em><p>Used to send a username and password encoded token</p><p><strong>Example</strong>:</p><pre>Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>batchIds</strong>: <em>(string)</em><p>Comma separated list of batch ids</p><p><strong>Example</strong>:</p><pre>134,142</pre></li></ul></div><div class="tab-pane" id="_batches__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+      data: [
+        {
+          "id": "134",
+          "createTime": "2014-05-23T10:35:00Z",
+          "updateTime": "2014-06-13T10:38:00Z",
+          "endTime": "2014-06-13T10:45:00Z",
+          "totalCount": 255000,
+          "errorCount": 0,
+          "successCount": 255000
+        },
+        {
+          "id": "142",
+          "createTime": "2014-06-13T10:35:00Z",
+          "updateTime": "2014-06-13T10:38:00Z",
+          "endTime": "2014-06-13T10:45:00Z",
+          "totalCount": 3200,
+          "errorCount": 0,
+          "successCount": 12632
+        }
+      ]
+    }
+    </code></pre><h2>Security Responses</h2><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Bad or expired token.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Unauthorized request.</p></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#_batch">Individual Batch job details</a></li><li><a href="#_batches">Batch job collection details</a></li></ul></div></div></div></div></body></html>

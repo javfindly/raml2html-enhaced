@@ -172,6 +172,21 @@
                         <h3 id="{{uniqueId}}"><a href="#{{uniqueId}}">{{title}}</a></h3>
                         {{md content}}
                     {{/documentation}}
+                    
+                    {{#each securitySchemes}}
+                        {{#each this}}
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4>Security Scheme: <strong>{{@key}}</strong></h4>
+                                </div>
+                                <div class="panel-body">
+                                    {{#if type}}<h5>Type: <strong>{{this.type}}</strong></h5>{{/if}}
+                                    {{#if description}}<h5>{{this.description}}</h5>{{/if}}
+                                </div>
+                            </div>
+                        {{/each}}
+                    {{/each}}
+                    
                 </div>
 
                 {{#resources}}
