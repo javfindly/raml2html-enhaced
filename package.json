@@ -1,7 +1,7 @@
 {
   "name": "raml2html-enhaced",
   "description": "RAML to HTML documentation generator enhaced",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "dependencies": {
     "commander": "2.8.x",
     "handlebars": "3.x",
